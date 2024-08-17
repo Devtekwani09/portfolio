@@ -7,7 +7,7 @@ const Nav = () => {
     const [isOpen, setisOpen] = useState(false);
 
   return (
-    <div className='z-10 sticky top-0 w-full h-[70px] bg-richblack-700 text-richblack-300'>
+    <div className='z-10 top-0 md:sticky w-full h-[70px] bg-richblack-700 text-richblack-300'>
         <div className='w-11/12 flex items-center justify-between mx-auto p-3'>
             <div className='flex text-3xl'>
                 D  
