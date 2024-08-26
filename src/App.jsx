@@ -149,7 +149,6 @@ function App() {
             <img src={mongo} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
             <img src={git} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
             <img src={python} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
-            <img src={css} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
           </div>
 
         </div>
