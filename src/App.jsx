@@ -7,6 +7,13 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { projects } from './Data/projects';
 import { useState } from 'react';
 import Cards from './Components/Cards';
+import java from '../src/public/images/skills/java2.png'
+import css from '../src/public/images/skills/css2.png'
+import python from '../src/public/images/skills/python.png'
+
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import toast from 'react-hot-toast';
 
 const projectTitle = [
   "All Projects",
@@ -24,6 +31,26 @@ function App() {
     const result = projects.filter((pro) => pro.title === value);
     setProject(result[0].links)
   }
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_nmmhlkg', 'template_vtdmavu', form.current, {
+        publicKey: 'OaFtkXeY25bfY4afP',
+      })
+      .then(
+        () => {
+          toast.success('SUCCESS!...Email Sent successfully');
+          e.target.reset()
+        },
+        (error) => {
+          toast.error('FAILED!... Can not sent emai try again');
+        },
+      );
+  };
 
   return (
     <div className='w-screen max-h-full min-h-full h-full bg-richblack-900 flex flex-col'>
@@ -97,10 +124,72 @@ function App() {
         </div>
       </div>
 
+      {/******************Skills Section  ***********************/}
       <div className='h-full mt-[150px] text-richblack-25'>
-        <div className='w-11/12 flex flex-wrap items-center justify-center mx-auto gap-5 gap-y-16'>
+        <div className='w-11/12 flex flex-col flex-wrap items-center justify-center mx-auto gap-5 gap-y-16'>
           <div className='flex text-4xl'>
-            Ski <HighlightedText text={"lls"}/>
+            Languages & <HighlightedText text={"Tools"}/>
+          </div>
+
+          <div className='md:w-11/12 flex flex-wrap gap-x-32 gap-y-12 justify-center items-center mx-auto '>
+            <img src={css} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={java} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-[#f89820] shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={python} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={css} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+          </div>
+
+        </div>
+      </div>
+
+
+      {/******************Skills Section  ***********************/}
+      <div className='h-full mt-[150px] text-richblack-25'>
+        <div className='w-11/12 bg-richblack-800 flex flex-col items-center mx-auto gap-5 gap-y-16 mt-5 mb-8 rounded-md'>
+          <div className='flex text-4xl'>
+          Lets <HighlightedText text={" Connect"}/>
+          </div>
+
+          <div className='flex md:flex-row flex-col-reverse items-center flex-wrap-reverse justify-between w-11/12'>
+            <div className='text-4xl'>
+              Connect me on - 
+              <div className='flex flex-row gap-4 text-[40px] mt-3'>
+              <a href="https://github.com/Devtekwani09" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+              </a>
+              <a href="linkedin.com/in/dev-tekwani-3b5b74220" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+              </a>
+              
+            </div>
+              
+            </div>
+
+            <div className='flex flex-col w-[50%]'>
+              <div className='text-3xl'>
+                Contact Form
+              </div>
+
+              <form ref={form} onSubmit={sendEmail} className='flex flex-col mt-4 mb-4 gap-2'>
+              <label>
+              <p className='text-2xl text-richblack-5'>Name <sup className='text-pink-200'>*</sup></p>
+              <input required type="text" name="user_name" className='text-richblack-5 bg-richblack-900 rounded-md p-2 w-full mt-1' />
+              </label>
+              
+              <label>
+              <p className='text-2xl text-richblack-5'>Email <sup className='text-pink-200'>*</sup></p>
+              <input required type="email" name="user_email" className='text-richblack-5 bg-richblack-900 rounded-md p-2 w-full mt-1' />
+              </label>
+              
+              <label>
+              <p className='text-2xl text-richblack-5'>Message <sup className='text-pink-200'>*</sup></p>
+              <textarea required name="message" className='text-richblack-5 bg-richblack-900 rounded-md p-2 w-full mt-1' />
+              </label>
+              
+              <button type='submit' className='bg-yellow-100 text-richblack-900 p-2 w-full rounded-md hover:scale-95 duration-200 transition-all'>Send</button>
+            </form>
+
+
+            </div>
           </div>
 
         </div>
