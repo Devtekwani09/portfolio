@@ -23,8 +23,12 @@ const Nav = () => {
                         <a href="#Projects">Projects</a>
                     </li>
                     <li className='cursor-pointer hover:text-richblack-50 transition-all duration-200'>
-                        Contact
+                        <a href="#skills">Skills</a>
                     </li>
+                    <li className='cursor-pointer hover:text-richblack-50 transition-all duration-200'>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    
                 </ul>               
             </div>
             {}

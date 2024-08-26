@@ -10,6 +10,13 @@ import Cards from './Components/Cards';
 import java from '../src/public/images/skills/java2.png'
 import css from '../src/public/images/skills/css2.png'
 import python from '../src/public/images/skills/python.png'
+import express from '../src/public/images/skills/express.png'
+import git from '../src/public/images/skills/git.png'
+import html from '../src/public/images/skills/html.png'
+import js from '../src/public/images/skills/js.png'
+import mongo from '../src/public/images/skills/mongo.png'
+import node from '../src/public/images/skills/node.jpeg'
+import react from '../src/public/images/skills/react.png'
 
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -63,7 +70,7 @@ function App() {
             <p className='text-xl '>
               I am a dedicated full Stack Developer with a passion for continuous learning and problem solving
             </p>
-            <a href="https://drive.google.com/file/d/1MJcVRjv0OSzLPyAhgyr87Oe0YXQPmWUj/view?usp=sharing" rel="noopener noreferrer">
+            <a target='_blank' href="https://drive.google.com/file/d/1MJcVRjv0OSzLPyAhgyr87Oe0YXQPmWUj/view?usp=sharing" rel="noopener noreferrer">
               <button className='bg-richblack-600 p-3 rounded-md w-[130px] hover:bg-richblack-500 hover:scale-95 transition-all duration-200'>
                 Resume
               </button>
@@ -71,7 +78,7 @@ function App() {
             
 
             <div className='flex flex-row gap-4 text-[40px]'>
-              <a href="https://github.com/Devtekwani09" target="_blank" rel="noopener noreferrer">
+              <a  href="https://github.com/Devtekwani09" target="_blank" rel="noopener noreferrer">
               <FaGithub />
               </a>
               <a href="linkedin.com/in/dev-tekwani-3b5b74220" target="_blank" rel="noopener noreferrer">
@@ -125,15 +132,22 @@ function App() {
       </div>
 
       {/******************Skills Section  ***********************/}
-      <div className='h-full mt-[150px] text-richblack-25'>
+      <div id='skills' className='h-full mt-[150px] text-richblack-25'>
         <div className='w-11/12 flex flex-col flex-wrap items-center justify-center mx-auto gap-5 gap-y-16'>
           <div className='flex text-4xl'>
             Languages & <HighlightedText text={"Tools"}/>
           </div>
 
           <div className='md:w-11/12 flex flex-wrap gap-x-32 gap-y-12 justify-center items-center mx-auto '>
-            <img src={css} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
             <img src={java} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-[#f89820] shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={html} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-[#f89820] shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={css} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={js} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={react} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={node} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={express} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={mongo} width={200} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
+            <img src={git} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
             <img src={python} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
             <img src={css} alt="java" className='bg-richblack-800 rounded-full shadow-blue-400 shadow-inner hover:scale-110 duration-200 transition-all' />
           </div>
@@ -143,9 +157,9 @@ function App() {
 
 
       {/******************Skills Section  ***********************/}
-      <div className='h-full mt-[150px] text-richblack-25'>
+      <div id='contact' className='h-full mt-[150px] text-richblack-25'>
         <div className='w-11/12 bg-richblack-800 flex flex-col items-center mx-auto gap-5 gap-y-16 mt-5 mb-8 rounded-md'>
-          <div className='flex text-4xl'>
+          <div className='flex text-4xl mt-4 gap-x-2'>
           Lets <HighlightedText text={" Connect"}/>
           </div>
 

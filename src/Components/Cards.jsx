@@ -22,10 +22,10 @@ const Cards = ({data}) => {
                 </div>
 
                 <div className='flex flex-row gap-2 text-richblack-50 ml-4 text-3xl'>
-                    <a href={data.githubLink}>
+                    <a target='_blank' rel="noopener noreferrer" href={data.githubLink}>
                         <FaGithub />
                     </a>
-                    <a href={data.projectLink}>
+                    <a target='_blank' rel="noopener noreferrer" href={data.projectLink}>
                         <IoMdOpen />
                     </a>
                     
