@@ -32,6 +32,7 @@ function App() {
 
   const [currTab, setCurrTab] = useState(projectTitle[0])
   const [project, setProject] = useState(projects[0].links)
+  const [loading, setLoading] = useState(false);
 
   const setMyProject = (value) => {
     setCurrTab(value)
@@ -43,21 +44,24 @@ function App() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    
+    setLoading(true);  // Set loading to true at the start of form submission
+    
     emailjs
-      .sendForm('service_nmmhlkg', 'template_vtdmavu', form.current, {
-        publicKey: 'OaFtkXeY25bfY4afP',
-      })
+      .sendForm('service_nmmhlkg', 'template_vtdmavu', form.current, 'OaFtkXeY25bfY4afP')
       .then(
         () => {
           toast.success('SUCCESS!...Email Sent successfully');
-          e.target.reset()
+          e.target.reset();  // Clear the form after success
+          setLoading(false);  // Set loading to false after success
         },
         (error) => {
-          toast.error('FAILED!... Can not sent emai try again');
-        },
+          toast.error('FAILED!...Cannot send email, try again');
+          setLoading(false);  // Set loading to false after failure
+        }
       );
   };
+  
 
   return (
     <div className='w-screen max-h-full min-h-full h-full bg-richblack-900 flex flex-col'>
@@ -198,7 +202,11 @@ function App() {
               <textarea required name="message" className='text-richblack-5 bg-richblack-900 rounded-md p-2 w-full mt-1' />
               </label>
               
-              <button type='submit' className='bg-yellow-100 text-richblack-900 p-2 w-full rounded-md hover:scale-95 duration-200 transition-all'>Send</button>
+              <button type='submit' className='bg-yellow-100 text-richblack-900 p-2 w-full rounded-md hover:scale-95 duration-200 transition-all'>
+                {
+                  loading ? <p>Sending...</p> : <p>Send</p>
+                }
+              </button>
             </form>
 
 
