@@ -36,14 +36,14 @@ export const projects = [
           image: sgpa,
           description: 'In a world where technology evolves rapidly, staying ahead means constantly learning and adapting. Embracing change is no longer optional but essential for success. The fusion of innovation and creativity drives progress, pushing boundaries and creating new possibilities.',
           githubLink: 'https://github.com/Devtekwani09/SGPA_Calculator-using-React',
-          projectLink: 'sgpa-calculator-using-react.vercel.app'
+          projectLink: 'https://sgpa-calculator-using-react.vercel.app/'
         },
         {
           title: "Portfolio Website",
           image: portfolio,
           description: 'In a world where technology evolves rapidly, staying ahead means constantly learning and adapting. Embracing change is no longer optional but essential for success. The fusion of innovation and creativity drives progress, pushing boundaries and creating new possibilities.',
           githubLink: 'https://github.com/Devtekwani09/portfolio',
-          projectLink: 'https://portfolio-570feqcmp-devtekwani09s-projects.vercel.app'
+          projectLink: 'https://portfolio-dev-tekwani.vercel.app/'
         },
         {
           title: "Diabities Prediction",
