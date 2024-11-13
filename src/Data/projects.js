@@ -78,7 +78,7 @@ export const projects = [
           image: sgpa,
           description: 'In a world where technology evolves rapidly, staying ahead means constantly learning and adapting. Embracing change is no longer optional but essential for success. The fusion of innovation and creativity drives progress, pushing boundaries and creating new possibilities.',
           githubLink: 'https://github.com/Devtekwani09/SGPA_Calculator-using-React',
-          projectLink: 'sgpa-calculator-using-react.vercel.app'
+          projectLink: 'https://sgpa-calculator-using-react.vercel.app/'
         },
         {
           title: "Portfolio Website",
