@@ -85,7 +85,7 @@ export const projects = [
           image: portfolio,
           description: 'In a world where technology evolves rapidly, staying ahead means constantly learning and adapting. Embracing change is no longer optional but essential for success. The fusion of innovation and creativity drives progress, pushing boundaries and creating new possibilities.',
           githubLink: 'https://github.com/Devtekwani09/portfolio',
-          projectLink: 'https://portfolio-570feqcmp-devtekwani09s-projects.vercel.app'
+          projectLink: 'https://portfolio-dev-tekwani.vercel.app/'
         },
         
       ],
